@@ -31,4 +31,10 @@ export interface ISPInfo {
     location?: LocationInfo;
     risk?: RiskInfo;
   }
+
+  type Octet = `${number}`;
+  type IPv4 = `${Octet}.${Octet}.${Octet}.${Octet}`
+  type Hextet = string;
+  type IPv6 = `${Hextet}:${Hextet}:${Hextet}:${Hextet}:${Hextet}:${Hextet}:${Hextet}:${Hextet}`
+  export type IPAddress = IPv4 | IPv6;
   
